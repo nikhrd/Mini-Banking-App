@@ -32,6 +32,7 @@ public class mainpage {
 		signup_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Signup();
+
 			}
 		});
 		
