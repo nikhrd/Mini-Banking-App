@@ -2,14 +2,15 @@ package banking;
 import javax.swing.*;
 import java.awt.event.*;
 public class mainpage {
-
 	public static void main(String[] args) {
+        showMainMenu();
+    }
+	public static void showMainMenu() {
 		JFrame j=new JFrame("Mini Banking App");
 		j.setLayout(null);
 		j.setSize(1000,500);
 		j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		JLabel name=new JLabel("Mini Banking App");
+		j.setTitle("Mini Banking App");
 		
 		JButton login_btn=new JButton("Log in");
 		login_btn.setBounds(375,100,200,50);
@@ -25,12 +26,14 @@ public class mainpage {
 		
 		login_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				j.dispose();
 				new Login();
 			}
 		});
 		
 		signup_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				j.dispose();
 				new Signup();
 
 			}
